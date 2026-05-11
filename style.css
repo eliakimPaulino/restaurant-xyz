@@ -1,8 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+}
+
+.menu {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header, footer {
@@ -24,14 +44,20 @@ main {
 
 .card {
     background-color: #f4f4f4;
-    padding: 1 rem;
-    border-radius: 5px;
+    padding: 30px 20px;
+    border-radius: 10px;
     text-align: center;
 }
 
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(2, 1 fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
     }
 }
 
